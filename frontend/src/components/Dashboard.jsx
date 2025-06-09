@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Typewriter } from 'react-simple-typewriter';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Dashboard = () => {
@@ -16,34 +17,74 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <div className="bg-light min-vh-100 py-5">
-      <div className="container">
-        <h1 className="text-center fw-bold mb-3">Welcome to Energy Ratings Studio</h1>
-        <p className="text-center text-muted mb-5">
-          Your trusted partner for sustainable energy compliance and building assessments.
+    <div className="position-relative text-white" style={{ marginTop: 0, paddingTop: 0 }}>
+      {/* Hero Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="position-fixed"
+        style={{
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          zIndex: -1
+        }}
+      >
+        <source src="/Hero1.mov" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay */}
+      <div
+        className="min-vh-100 d-flex flex-column justify-content-center align-items-center"
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.4)', // semi-dark overlay for text clarity
+          paddingTop: '80px'
+        }}
+      >
+        <h1 className="fw-bold text-center display-4">Welcome to Energy Ratings Studio</h1>
+        <p className="lead mt-2 text-center">
+          <span style={{ fontSize: '28px', fontWeight: 'bold', color: 'white' }}>
+            <Typewriter
+              words={['Sustainable Energy', 'Accurate Compliance', 'Trusted Experts']}
+              loop={0}
+              cursor
+              cursorStyle="|"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1500}
+            />
+          </span>
         </p>
 
-        <div className="row text-center">
-          <div className="col-md-4 mb-4">
-            <div className="card shadow-sm p-4">
-              <h3 className="fw-semibold">{stats.projects_completed}</h3>
-              <p className="text-muted">Projects Completed</p>
+        {/* Stats Section
+        <div className="container mt-5">
+          <div className="row justify-content-center">
+            <div className="col-md-4 mb-4">
+              <div className="card bg-dark bg-opacity-75 text-white shadow-sm p-4">
+                <h3 className="fw-bold text-center">{stats.projects_completed}</h3>
+                <p className="text-center">Projects Completed</p>
+              </div>
+            </div>
+            <div className="col-md-4 mb-4">
+              <div className="card bg-dark bg-opacity-75 text-white shadow-sm p-4">
+                <h3 className="fw-bold text-center">{stats.services_offered}</h3>
+                <p className="text-center">Services Offered</p>
+              </div>
+            </div>
+            <div className="col-md-4 mb-4">
+              <div className="card bg-dark bg-opacity-75 text-white shadow-sm p-4">
+                <h3 className="fw-bold text-center">{stats.compliance_accuracy}</h3>
+                <p className="text-center">Compliance Accuracy</p>
+              </div>
             </div>
           </div>
-          <div className="col-md-4 mb-4">
-            <div className="card shadow-sm p-4">
-              <h3 className="fw-semibold">{stats.services_offered}</h3>
-              <p className="text-muted">Services Offered</p>
-            </div>
-          </div>
-          <div className="col-md-4 mb-4">
-            <div className="card shadow-sm p-4">
-              <h3 className="fw-semibold">{stats.compliance_accuracy}</h3>
-              <p className="text-muted">Compliance Accuracy</p>
-            </div>
-          </div>
-        </div>
-      </div>
+        </div> */}
+      </div> 
     </div>
   );
 };
