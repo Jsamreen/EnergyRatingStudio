@@ -31,8 +31,8 @@ const Header = ({ onToggleMenu }) => {
         </div>
 
         <nav className="d-none d-md-flex">
-          {['/', '/about', '/projects', '/services', '/contact'].map((path, idx) => {
-            const labels = ['Home', 'About', 'Projects', 'Services', 'Contact'];
+          {['/', '/about', '/our-process', '/our-services', '/contact-us'].map((path, idx) => {
+            const labels = ['Home', 'About', 'Our Process', 'Our Services', 'Contact Us'];
             return (
               <NavLink
                 key={path}

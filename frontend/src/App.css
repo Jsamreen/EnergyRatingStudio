@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.contact-section .form-control {
+  border-radius: 8px;
+}
+
+.contact-section .btn:hover {
+  background-color: #45a049;
+  transition: background-color 0.3s ease;
+}
+

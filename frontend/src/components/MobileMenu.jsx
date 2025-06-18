@@ -21,16 +21,16 @@ const MobileMenu = () => {
           style={{ zIndex: 1000 }}
         >
           <h2 className="mb-4">
-            <Link to="/about" onClick={() => setOpen(false)} className="text-white text-decoration-none">ABOUT</Link>
+            <Link to="/about us" onClick={() => setOpen(false)} className="text-white text-decoration-none">ABOUT US</Link>
           </h2>
           <h2 className="mb-4">
-            <Link to="/projects" onClick={() => setOpen(false)} className="text-white text-decoration-none">PROJECTS</Link>
+            <Link to="/our-process" onClick={() => setOpen(false)} className="text-white text-decoration-none">OUR PROCESS</Link>
           </h2>
           <h2 className="mb-4">
-            <Link to="/services" onClick={() => setOpen(false)} className="text-white text-decoration-none">SERVICES</Link>
+            <Link to="/our-services" onClick={() => setOpen(false)} className="text-white text-decoration-none">OUR SERVICES</Link>
           </h2>
           <h2 className="mb-4">
-            <Link to="/contact" onClick={() => setOpen(false)} className="text-white text-decoration-none">CONTACT</Link>
+            <Link to="/contact-us" onClick={() => setOpen(false)} className="text-white text-decoration-none">CONTACT US</Link>
           </h2>
           <p className="text-muted mt-5">Agents apply to join our network →</p>
         </div>
