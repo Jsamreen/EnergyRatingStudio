@@ -4,16 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Dashboard.css'; 
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 
-// Define steps array
-// const steps = [
-//   { title: 'Step One', description: 'Email us your plans' },
-//   { title: 'Step Two', description: 'We’ll send you a quote and request some further information' },
-//   { title: 'Step Three', description: 'We’ll provide you with a turn around time' },
-//   { title: 'Step Four', description: 'We’ll send a preliminary report including what is needed to achieve 6-star certification' },
-//   { title: 'Step Five', description: 'Once finalised, we’ll send a Nationwide House Energy Rating Scheme Certificate' }
-// ];
+
 
 const Dashboard = () => {
   // eslint-disable-next-line no-unused-vars
@@ -205,11 +199,13 @@ const Dashboard = () => {
         <p>
           With our extensive experience, we blend deep industry knowledge with practical construction expertise to assess and certify new developments with precision and professionalism.
         </p>
-        <button
-          className="btn btn-outline-light mt-3 px-4 py-2 fw-bold rounded-pill"
-        >
-          More About Us
-        </button>
+        <Link to="/about">
+          <button
+            className="btn btn-outline-light mt-3 px-4 py-2 fw-bold rounded-pill"
+          >
+            More About Us
+          </button>
+        </Link>
       </div>
     </div>
   </div>
@@ -243,9 +239,11 @@ const Dashboard = () => {
           style={{ height: '100%' }}>
           
           <h4 className="fw-bold text-white mb-4">Talk to us today about our services</h4>
-          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2">
+          <Link to="/our-services#service-plans">
+          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2 transition duration-300 hover:bg-white hover:text-dark">
             Our Services →
           </button>
+          </Link>
         </div>
       </div>
 
@@ -258,9 +256,11 @@ const Dashboard = () => {
               6-star energy reports (NatHERS) assess the thermal performance of buildings.
             </p>
           </div>
-          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2">
+          <Link to="/our-services#service-plans">
+          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2 transition duration-300 hover:bg-white hover:text-dark">
             Read More
           </button>
+          </Link>
         </div>
       </div>
 
@@ -273,9 +273,11 @@ const Dashboard = () => {
               BESS helps local councils assess sustainability performance in Victoria.
             </p>
           </div>
-          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2">
+          <Link to="/our-services#service-plans">
+          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2 transition duration-300 hover:bg-white hover:text-dark">
             Read More
           </button>
+          </Link>
         </div>
       </div>
 
@@ -288,9 +290,11 @@ const Dashboard = () => {
               WSUD and stormwater reports support sustainable urban design for development approval.
             </p>
           </div>
-          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2">
+          <Link to="/our-services#service-plans">
+          <button className="btn border border-white text-white fw-bold rounded-pill mt-auto px-4 py-2 transition duration-300 hover:bg-white hover:text-dark">
             Read More
           </button>
+          </Link>
         </div>
       </div>
     </div>
@@ -317,7 +321,7 @@ const Dashboard = () => {
       {/* Image with scroll zoom */}
       <div className="col-md-6 mb-4 mb-md-0">
         <motion.img
-          src="/clients.jpg" // <-- Replace with your actual image path
+          src="/clients.jpg" // 
           alt="Clients"
           className="img-fluid rounded shadow"
           initial={{ scale: 0.9, opacity: 0 }}

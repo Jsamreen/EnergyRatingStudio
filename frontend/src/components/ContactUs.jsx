@@ -1,3 +1,36 @@
+import React from 'react';
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append('name', e.target.name.value);
+  formData.append('email', e.target.email.value);
+  formData.append('subject', e.target.subject.value);
+  formData.append('message', e.target.message.value);
+
+  const fileInput = e.target.planUpload;
+  if (fileInput.files.length > 0) {
+    formData.append('attachment', fileInput.files[0]);
+  }
+
+  try {
+    const res = await fetch('http://127.0.0.1:8000/api/contact/', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (res.ok) {
+      alert('Message submitted!');
+      e.target.reset();
+    } else {
+      alert('Error submitting the form');
+    }
+  } catch (error) {
+    console.error('Submit error:', error);
+    alert('Submission failed');
+  }
+};
 
 const ContactPage = () => {
   return (
@@ -15,17 +48,17 @@ const ContactPage = () => {
           zIndex: 1,
         }}
       >
-         <div
-    style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      backgroundColor: 'rgba(0, 0, 0, 0.5)',
-      zIndex: 1,
-    }}
-  ></div>
+        <div
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)',
+            zIndex: 1,
+          }}
+        ></div>
         <div className="text-center position-absolute" style={{ top: '5%', zIndex: 2 }}>
           <h3 className="fw-bold">Ready to power up your next build?</h3>
         </div>
@@ -34,26 +67,52 @@ const ContactPage = () => {
           className="bg-dark rounded shadow p-4"
           style={{ maxWidth: '500px', width: '100%', zIndex: 3 }}
         >
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="mb-3">
-              <input type="text" className="form-control" placeholder="Your Name (required)" required />
+              <input
+                type="text"
+                name="name"
+                className="form-control"
+                placeholder="Your Name (required)"
+                required
+              />
             </div>
             <div className="mb-3">
-              <input type="email" className="form-control" placeholder="Your Email (required)" required />
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                placeholder="Your Email (required)"
+                required
+              />
             </div>
             <div className="mb-3">
-              <input type="text" className="form-control" placeholder="Subject" />
+              <input
+                type="text"
+                name="subject"
+                className="form-control"
+                placeholder="Subject"
+              />
             </div>
             <div className="mb-3">
               <textarea
+                name="message"
                 className="form-control"
                 rows="5"
                 placeholder="Your Message"
               ></textarea>
             </div>
-            <div className=" mb-3">
-              <label htmlFor="planUpload" className="form-label fw-bold">Attach Plan (optional)</label>
-              <input type="file" className="form-control" id="planUpload" accept=".pdf,.doc,.docx,.jpg,.png" />
+            <div className="mb-3">
+              <label htmlFor="planUpload" className="form-label fw-bold">
+                Attach Plan (optional)
+              </label>
+              <input
+                type="file"
+                name="planUpload"
+                className="form-control"
+                id="planUpload"
+                accept=".pdf,.doc,.docx,.jpg,.png"
+              />
             </div>
             <div className="text-end">
               <button type="submit" className="btn btn-success px-4">
@@ -76,13 +135,6 @@ const ContactPage = () => {
           referrerPolicy="no-referrer-when-downgrade"
           title="ERS Studio Map"
         />
-      </div>
-      {/* CTA FOOTER */}
-      <div className="bg-light text-center py-4">
-        <p className="fs-5 fw-bold">
-          Get your property energy rating certified with six rate
-          <button className="btn btn-success btn-sm ms-3 px-3">GET IN TOUCH</button>
-        </p>
       </div>
     </>
   );

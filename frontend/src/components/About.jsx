@@ -19,6 +19,7 @@ const AboutUs = () => {
   useEffect(() => {
     if (inView) {
       controls.start({ opacity: 1, y: 0 });
+      window.scrollTo(0, 0);
     }
   }, [inView, controls]);
 

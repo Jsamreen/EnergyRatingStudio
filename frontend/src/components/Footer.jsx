@@ -33,36 +33,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* RIGHT: Contact Form */}
-          <div className="col-md-6">
-            <h5 className="text-success fw-bold mb-4">Contact Us</h5>
-            <form className="needs-validation" noValidate>
-              <div className="mb-3">
-                <label className="form-label fw-bold">Your Name (required)</label>
-                <input type="text" className="form-control" placeholder="Enter your name" required />
-              </div>
-              <div className="mb-3">
-                <label className="form-label fw-bold">Your Email (required)</label>
-                <input type="email" className="form-control" placeholder="Enter your email" required />
-              </div>
-              <div className="mb-3">
-                <label className="form-label fw-bold">Your Message</label>
-                <textarea className="form-control" rows="4" placeholder="Enter your message" required></textarea>
-              </div>
-              <div className=" mb-3">
-              <label htmlFor="planUpload" className="form-label fw-bold">Attach Plan (optional)</label>
-              <input type="file" className="form-control" id="planUpload" accept=".pdf,.doc,.docx,.jpg,.png" />
-            </div>
-              <button
-                type="submit"
-                className="btn px-4 py-2 fw-bold rounded-pill"
-                style={{ backgroundColor: '#4CAF50', color: '#fff' }}
-              >
-                Send
-              </button>
-            </form>
-          </div>
-
         </div>
       </div>
     </footer>

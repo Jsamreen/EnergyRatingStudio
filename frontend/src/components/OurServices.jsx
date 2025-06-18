@@ -1,15 +1,21 @@
 import { motion } from 'framer-motion';
-
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom'; 
 
 const OurServices = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 50 },
-    show: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.2, duration: 0.6 }
-    })
-  };
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#service-plans') {
+      const element = document.getElementById('service-plans');
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100); // short delay ensures layout is ready
+      }
+    }
+  }, [location]);
 
   return (
     <>
@@ -170,7 +176,7 @@ const OurServices = () => {
 </div>
 
 
-     <div
+     <div id= "service-plans"
   className="bg-dark text-white py-5"
   style={{
     backgroundColor: '#1c1e22',

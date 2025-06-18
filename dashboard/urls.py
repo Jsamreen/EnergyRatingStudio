@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import dashboard_data
+from .views import ContactAPIView
 
 urlpatterns = [
-    path('data/', dashboard_data, name='dashboard_data'),
+    path('contact/', ContactAPIView.as_view(), name='contact-api'),
 ]

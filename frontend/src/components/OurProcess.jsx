@@ -1,5 +1,7 @@
 import React from 'react';
-import './Dashboard.css'; // optional for custom styles
+import './Dashboard.css'; 
+import { Link } from 'react-router-dom';
+
 
 const steps = [
   {
@@ -71,16 +73,18 @@ const OurProcess = () => {
         </div>
 
         <div className="text-center mt-4">
-          <button
-            className="btn px-4 py-2 fw-bold fs-5 rounded-pill"
-            style={{
-              backgroundColor: '#28a745',
-              color: '#fff',
-              border: 'none'
-            }}
-          >
-            Submit Your Plan
-          </button>
+          <Link to="/contact-us" className="text-decoration-none">
+            <button
+              className="btn px-4 py-2 fw-bold fs-5 rounded-pill"
+              style={{
+                backgroundColor: '#28a745',
+                color: '#fff',
+                border: 'none'
+              }}
+            >
+              Submit Your Plan
+            </button>
+          </Link>
         </div>
       </div>
     </div>
