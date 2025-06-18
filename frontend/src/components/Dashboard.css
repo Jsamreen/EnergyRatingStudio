@@ -77,3 +77,59 @@
   transform: rotateY(180deg);
 }
 
+.transition-zoom {
+  transform: scale(0.95);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+.zoom-in {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.service-box {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.service-box:hover {
+  background-color: #6c757d; /* Bootstrap gray */
+  color: white;
+}
+
+.service-card {
+  transition: all 0.3s ease;
+  border: 2px solid #00ffee;
+}
+
+.service-card:hover {
+  background-color: #495057;
+  color: white;
+  border: 2px solid #00ffee;
+}
+
+.service-card:hover p,
+.service-card:hover h4,
+.service-card:hover h5 {
+  color: white !important;
+}
+
+.service-card:hover .btn {
+  border-color: white;
+  color: white;
+}
+
+.accreditation-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.accreditation-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}

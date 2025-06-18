@@ -26,9 +26,10 @@ const Footer = () => {
             <a href="#" className="text-white me-3 text-decoration-none">LinkedIn</a>
             <a href="#" className="text-white text-decoration-none">YouTube</a>
 
-            <div className="text-muted small mt-4">
-              <p className="mb-1">© {new Date().getFullYear()} Energy Ratings Studio. All Rights Reserved.</p>
-              <p>Privacy Policy | Designed by Javeria</p>
+            <div className="text-white text-muted small mt-4"> 
+              <p className="mb-1 text-white">© {new Date().getFullYear()} Energy Ratings Studio. All Rights Reserved.</p>
+              <p
+               className="mb-1 text-white">Privacy Policy | Designed by Javeria</p>
             </div>
           </div>
 
@@ -48,6 +49,10 @@ const Footer = () => {
                 <label className="form-label fw-bold">Your Message</label>
                 <textarea className="form-control" rows="4" placeholder="Enter your message" required></textarea>
               </div>
+              <div className=" mb-3">
+              <label htmlFor="planUpload" className="form-label fw-bold">Attach Plan (optional)</label>
+              <input type="file" className="form-control" id="planUpload" accept=".pdf,.doc,.docx,.jpg,.png" />
+            </div>
               <button
                 type="submit"
                 className="btn px-4 py-2 fw-bold rounded-pill"
