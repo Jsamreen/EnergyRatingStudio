@@ -1,4 +1,4 @@
-# EnergyRatingsStudio
+# Energy Rating Studio
 
 A full-stack Django + React project for energy compliance assessments.
 

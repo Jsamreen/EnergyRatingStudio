@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+
 import { Typewriter } from 'react-simple-typewriter';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Dashboard.css'; 
@@ -7,25 +7,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 
-
-
 const Dashboard = () => {
-  // eslint-disable-next-line no-unused-vars
-  // Inside Dashboard component...
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 });
-
-  const [stats, setStats] = useState({
-    projects_completed: 0,
-    services_offered: 0,
-    compliance_accuracy: ''
-  });
-
-  useEffect(() => {
-    fetch('http://127.0.0.1:8000/dashboard/data/')
-      .then(res => res.json())
-      .then(data => setStats(data))
-      .catch(err => console.error('Error fetching dashboard data:', err));
-  }, []);
 
   return (
    <div
@@ -47,7 +30,7 @@ const Dashboard = () => {
           zIndex: -1
         }}
       >
-        <source src="/Hero1.mov" type="video/mp4" />
+        <source src="/hero_dashboard.mov" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div
@@ -61,11 +44,11 @@ const Dashboard = () => {
           height: '100vh',
           zIndex: 1,                
           pointerEvents: 'none',    
-          backgroundColor: 'rgba(0, 0, 0, 0.3)' // dark overlay for readability
+          backgroundColor: 'rgba(0, 0, 0, 0.3)' 
         }}
       >
       
-        <h1 className="fw-bold text-center display-4">Welcome to Energy Ratings Studio</h1>
+        <h1 className="fw-bold text-center display-4">Welcome to Energy Rating Studio</h1>
         <p className="lead mt-2 text-center">
           <span style={{ fontSize: '28px', fontWeight: 'bold', color: 'white', zIndex: 1 }}>
             <Typewriter
@@ -192,9 +175,9 @@ const Dashboard = () => {
 
       {/* About Text */}
       <div className="col-md-6">
-        <h2 className="fw-bold mb-4">About EnergyRatingsStudio</h2>
+        <h2 className="fw-bold mb-4">About Energy Rating Studio</h2>
         <p>
-          EnergyRatingsStudio is an energy efficiency assessment company that specialises in helping the construction industry meet energy compliance standards.
+          Energy Rating Studio is an energy efficiency assessment company that specialises in helping the construction industry meet energy compliance standards.
         </p>
         <p>
           With our extensive experience, we blend deep industry knowledge with practical construction expertise to assess and certify new developments with precision and professionalism.
@@ -251,9 +234,9 @@ const Dashboard = () => {
       <div className="col-md-3 d-flex">
         <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-3 shadow">
           <div>
-            <h5 className="fw-bold text-white mb-2">Six-star assessments and reports</h5>
+            <h5 className="fw-bold text-white mb-2">Seven-star assessments and reports</h5>
             <p className="text-white-50 mb-4">
-              6-star energy reports (NatHERS) assess the thermal performance of buildings.
+              7-star energy reports (NatHERS) assess the thermal performance of buildings.
             </p>
           </div>
           <Link to="/our-services#service-plans">
@@ -373,7 +356,11 @@ const Dashboard = () => {
       <div className="col-md-5">
         <div className="accreditation-card text-center p-5 rounded-4 shadow-sm h-100 bg-white glass-effect">
           <div className="mb-3">
-            <i className="bi bi-award-fill text-success" style={{ fontSize: '2rem' }}></i>
+            <img
+              src="/design_matters_logo.png"
+              alt="Design Matters Logo"
+              style={{ maxHeight: '100px' }}
+            />
           </div>
           <h5 className="fw-bold text-dark mb-0">Member of the Design Matters</h5>
         </div>
@@ -383,7 +370,11 @@ const Dashboard = () => {
       <div className="col-md-5">
         <div className="accreditation-card text-center p-5 rounded-4 shadow-sm h-100 bg-white glass-effect">
           <div className="mb-3">
-            <i className="bi bi-shield-lock-fill text-dark" style={{ fontSize: '2rem' }}></i>
+            <img
+              src="/nathers_logo.png"
+              alt="Nationwide House Energy Rating Scheme Logo"
+              style={{ maxHeight: '100px' }}
+            />
           </div>
           <h5 className="fw-bold text-dark mb-0">Nationwide House Energy Rating Scheme</h5>
         </div>

@@ -51,7 +51,7 @@ const AboutUs = () => {
       >
         <h2 className="fw-bold mb-4">About Us</h2>
         <p className="fs-5 text-white">
-          EnergyRatingsStudio is an industry leader in building energy assessments, delivering compliance solutions for residential and commercial developers alike.
+          Energy Rating Studio is an industry leader in building energy assessments, delivering compliance solutions for residential and commercial developers alike.
         </p>
         <p className="fs-5 text-white">
           Our team of accredited assessors and engineers brings deep technical knowledge and a commitment to sustainability.

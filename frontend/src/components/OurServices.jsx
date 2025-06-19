@@ -209,8 +209,8 @@ const OurServices = () => {
       {/* Service Cards */}
       {[
         {
-          title: 'Six-star assessments and reports',
-          desc: '6-star energy reports (NatHERS) assess the thermal performance of new homes to ensure they meet minimum energy efficiency standards in Australia.',
+          title: 'Seven-star assessments and reports',
+          desc: '7-star energy reports (NatHERS) assess the thermal performance of new homes to ensure they meet minimum energy efficiency standards in Australia.',
           prices: [
             { type: 'Single Storey', amount: '$250+' },
             { type: 'Double Storey', amount: '$350+' },
