@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-55pu23*3&1^-$b5x(onr0o7hn-%mmpr7!1t&nn30qd$kb3w0=p
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['energyratingsstudio-backend.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['energyratingstudio-backend.onrender.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -77,7 +77,7 @@ TEMPLATES = [
 ]
 
 
-CORS_ALLOW_ALL_ORIGINS = ["https://energyratingstudio-frontend.onrender.com"] # Uncomment this line to allow all origins
+CORS_ALLOW_ALL_ORIGINS = True
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
