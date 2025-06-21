@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom'; 
+import './OurServices.css'; // Assuming you have a CSS file for custom styles
 
 const OurServices = () => {
 
@@ -60,7 +61,7 @@ const OurServices = () => {
 
     {/* LEFT CONTENT BLOCK */}
           <motion.div
-        className="col-md-6 d-flex align-items-start gap-3"
+        className="col-md-6 d-flex align-items-start gap-3 ourservices-intro"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
@@ -84,7 +85,7 @@ const OurServices = () => {
 
     {/* RIGHT SERVICES LIST */}
      <motion.div
-      className="col-md-6"
+      className="col-md-6 ourservices-intro"
       style={{ display: 'flex', alignItems: 'start', gap: '20px', paddingLeft: '50px' }}
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}

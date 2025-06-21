@@ -1,8 +1,12 @@
+import './ContactUs.css';
+ 
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 
   const formData = new FormData();
   formData.append('name', e.target.name.value);
+  formData.append('contact', e.target.contact.value);
   formData.append('email', e.target.email.value);
   formData.append('subject', e.target.subject.value);
   formData.append('message', e.target.message.value);
@@ -35,7 +39,7 @@ const ContactPage = () => {
     <>
       {/* HERO SECTION with Contact Form */}
       <div
-        className="position-relative text-white d-flex align-items-center justify-content-center"
+        className="position-relative text-white d-flex align-items-center justify-content-center contact-hero"
         style={{
           backgroundImage: "url('/contact_us_hero.png')",
           marginTop: -20,
@@ -57,12 +61,13 @@ const ContactPage = () => {
             zIndex: 1,
           }}
         ></div>
+
         <div className="text-center position-absolute" style={{ top: '10%', zIndex: 2 }}>
           <h3 className="fw-bold">Ready to power up your next build?</h3>
         </div>
 
         <div
-          className="bg-dark rounded shadow p-4"
+          className="bg-dark rounded shadow p-4 contact-form-wrapper"
           style={{ maxWidth: '500px', width: '100%', zIndex: 2, marginBottom: '60px' }}
         >
           <form onSubmit={handleSubmit}>
@@ -76,13 +81,13 @@ const ContactPage = () => {
               />
             </div>
             <div className="mb-3">
-            <input
-              type="tel"
-              name="contact"
-              className="form-control"
-              placeholder="Your Contact Number (optional)"
-            />
-          </div>
+              <input
+                type="tel"
+                name="contact"
+                className="form-control"
+                placeholder="Your Contact Number (optional)"
+              />
+            </div>
             <div className="mb-3">
               <input
                 type="email"
@@ -130,7 +135,7 @@ const ContactPage = () => {
       </div>
 
       {/* EMBEDDED MAP SECTION */}
-      <div className="w-100" style={{height: '400px' }}>
+      <div className="w-100" style={{ height: '400px' }}>
         <iframe
           src="https://www.google.com/maps?q=30+Laino+Blvd,+Epping+VIC+3076,+Australia&output=embed"
           width="100%"

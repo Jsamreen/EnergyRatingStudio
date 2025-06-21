@@ -197,7 +197,7 @@ const Dashboard = () => {
 
 {/* OUR SERVICES SECTION */}
 <div
-  className="bg-dark text-white py-5"
+  className="bg-dark text-white py-5 our-services-section"
   style={{
     backgroundColor: '#1c1e22',
     paddingTop: ' 200px',
@@ -218,7 +218,7 @@ const Dashboard = () => {
        }}>
       {/* Intro Column */}
       <div className="col-md-3 d-flex">
-        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-3 shadow"
+        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-4 border border-info"
           style={{ height: '100%' }}>
           
           <h4 className="fw-bold text-white mb-4">Talk to us today about our services</h4>
@@ -232,7 +232,7 @@ const Dashboard = () => {
 
       {/* Card 1 */}
       <div className="col-md-3 d-flex">
-        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-3 shadow">
+        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-4 border border-info">
           <div>
             <h5 className="fw-bold text-white mb-2">Seven-star assessments and reports</h5>
             <p className="text-white-50 mb-4">
@@ -249,7 +249,7 @@ const Dashboard = () => {
 
       {/* Card 2 */}
       <div className="col-md-3 d-flex">
-        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-3 shadow">
+        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-4 border border-info">
           <div>
             <h5 className="fw-bold text-white mb-2">BESS assessments and reports</h5>
             <p className="text-white-50 mb-4">
@@ -266,7 +266,7 @@ const Dashboard = () => {
 
       {/* Card 3 */}
       <div className="col-md-3 d-flex">
-        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-3 shadow">
+        <div className="service-card w-100 d-flex flex-column justify-content-between p-4 rounded-4 border border-info">
           <div>
             <h5 className="fw-bold text-white mb-2">WSUD and Storm assessments</h5>
             <p className="text-white-50 mb-4">
@@ -289,22 +289,19 @@ const Dashboard = () => {
   className="bg-dark text-white py-5"
   style={{
     backgroundColor: '#1c1e22',
-    paddingTop: ' 200px',
+    paddingTop: '100px',
     paddingBottom: '100px',
-    height: '80vh',
     position: 'relative',
     zIndex: 2,
   }}
 >
-  <div className="container 
-    position-relative"
-    style={{ paddingTop: '50px', paddingBottom: '50px' , zIndex: 2 }}>
-    <div className="row align-items-center">
+  <div className="container position-relative">
+    <div className="row flex-column flex-md-row align-items-center">
 
-      {/* Image with scroll zoom */}
+      {/* Image */}
       <div className="col-md-6 mb-4 mb-md-0">
         <motion.img
-          src="/clients.jpg" // 
+          src="/clients.jpg"
           alt="Clients"
           className="img-fluid rounded shadow"
           initial={{ scale: 0.9, opacity: 0 }}
@@ -315,20 +312,20 @@ const Dashboard = () => {
       </div>
 
       {/* Text content */}
-      <div className="col-md-6
-        d-flex flex-column justify-content-center align-items-start"
-        style={{ paddingLeft: '50px', paddingRight: '30px' }}>
+      <div
+        className="col-md-6 d-flex flex-column justify-content-center align-items-start px-3"
+      >
         <h2 className="fw-bold mb-4">Our Clients</h2>
         <p className="mb-3">
           We work with clients from a broad range of construction and design backgrounds, including:
         </p>
-        <ul className="list-unstyled fs-5">
-          <li className="text-white mb-2">✔️ High-volume residential builders</li>
-          <li className="text-white mb-2">✔️ Commercial builders</li>
-          <li className="text-white mb-2">✔️ Residential builders</li>
-          <li className="text-white mb-2">✔️ Architects</li>
-          <li className="text-white mb-2">✔️ Designers</li>
-          <li className="text-white mb-2">✔️ Owner builders</li>
+        <ul className="list-unstyled client-list fs-5">
+          <li className="mb-2">✔️ High-volume residential builders</li>
+          <li className="mb-2">✔️ Commercial builders</li>
+          <li className="mb-2">✔️ Residential builders</li>
+          <li className="mb-2">✔️ Architects</li>
+          <li className="mb-2">✔️ Designers</li>
+          <li className="mb-2">✔️ Owner builders</li>
         </ul>
       </div>
     </div>
