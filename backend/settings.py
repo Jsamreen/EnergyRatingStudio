@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
-import dj_database_url
 import os
 
 
@@ -42,7 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'dashboard',
     'rest_framework',
     'corsheaders',
 
@@ -79,7 +77,7 @@ TEMPLATES = [
 ]
 
 
-CORS_ALLOW_ALL_ORIGINS = True  # Uncomment this line to allow all origins
+CORS_ALLOW_ALL_ORIGINS = ["https://energyratingstudio-frontend.onrender.com"] # Uncomment this line to allow all origins
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 
@@ -87,9 +85,6 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': dj_database_url.parse(os.getenv("DATABASE_URL"))
-}
 
 
 # Password validation
@@ -138,3 +133,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email settings for Zoho Mail
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.zoho.com.au'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'talha@energyratingstudio.com.au'  # your Zoho email
+EMAIL_HOST_PASSWORD = 'Z5JNddumGsXc'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
