@@ -1,5 +1,3 @@
-import React from 'react';
-
 const Footer = () => {
   return (
     <footer className="bg-dark text-white pt-5 pb-4 mt-0"
@@ -17,9 +15,9 @@ const Footer = () => {
           {/* LEFT: Contact Info & Links */}
           <div className="col-md-6 mb-4">
             <h5 className="text-uppercase mb-3">Get in Touch</h5>
-            <p className="mb-1">Talha Aejaz Ahmed</p>
-            <p className="mb-1">0 451 215 223</p>
-            <p>talha@energyratingsstudio.com.au</p>
+            <p className="mb-1">Talha Ahmed</p>
+            <p className="mb-1">0451 215 223</p>
+            <p>talha@energyratingtudio.com.au</p>
 
             <h6 className="mt-4">Follow Us</h6>
             <a href="#" className="text-white me-3 text-decoration-none">Instagram</a>
@@ -27,7 +25,7 @@ const Footer = () => {
             <a href="#" className="text-white text-decoration-none">YouTube</a>
 
             <div className="text-white text-muted small mt-4"> 
-              <p className="mb-1 text-white">© {new Date().getFullYear()} Energy Ratings Studio. All Rights Reserved.</p>
+              <p className="mb-1 text-white">© {new Date().getFullYear()} Energy Rating Studio. All Rights Reserved.</p>
               <p
                className="mb-1 text-white">Privacy Policy | Designed by Javeria</p>
             </div>

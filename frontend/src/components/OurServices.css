@@ -1,8 +1,42 @@
-.icon-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Mobile-only layout fixes */
+@media (max-width: 768px) {
+  /* STACK left + right column vertically */
+  .row.align-items-start {
+    flex-direction: column !important;
+    align-items: left !important;
+  }
+
+  /* LEFT section (icon + text) full width, centered */
+  .ourservices-intro {
+    width: 100% !important;
+    flex-direction: column !important;
+    align-items: left !important;
+    text-align: left !important;
+    padding-left: 0rem !important;
+    padding-right: 5rem !important;
+  }
+
+  .ourservices-intro .pt-2 {
+    padding-top: 0 !important;
+    margin-bottom: 1rem;
+  }
+
+  .ourservices-intro .fs-5 {
+    font-size: 1rem !important;
+  }
+
+  /* RIGHT service list also full width + centered heading */
+  .ourservices-intro h4 {
+    text-align: left !important;
+    font-size: 2rem !important;
+  }
+
+  .ourservices-intro ul {
+    padding-left: 0 !important;
+  }
+
+  .ourservices-intro li {
+    justify-content: left !important;
+    text-align: left !important;
+  }
 }

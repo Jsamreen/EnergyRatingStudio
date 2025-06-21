@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 
+
 const Header = ({ onToggleMenu }) => {
   const location = useLocation();
   const isDashboard = location.pathname === '/';
@@ -15,19 +16,9 @@ const Header = ({ onToggleMenu }) => {
     >
       <div className="container d-flex justify-content-between align-items-center py-3">
         <div className="d-flex align-items-center">
-          <div
-            style={{
-              backgroundColor: '#fff',
-              color: '#000',
-              fontWeight: 'bold',
-              padding: '4px 10px',
-              borderRadius: '4px',
-              fontSize: '20px',
-            }}
-          >
-            ers
-          </div>
-          <div className="ms-2 text-white fw-bold fs-5">Studio</div>
+          <img src="/ers_logo.png" alt="ERS Logo" style={{ height: '60px', width: '60px' }} />
+
+          <div className="ms-2 text-white fw-bold fs-5">Energy Rating Studio</div>
         </div>
 
         <nav className="d-none d-md-flex">

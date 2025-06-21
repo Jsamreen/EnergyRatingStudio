@@ -1,10 +1,12 @@
-import React from 'react';
+import './ContactUs.css';
+ 
 
 const handleSubmit = async (e) => {
   e.preventDefault();
 
   const formData = new FormData();
   formData.append('name', e.target.name.value);
+  formData.append('contact', e.target.contact.value);
   formData.append('email', e.target.email.value);
   formData.append('subject', e.target.subject.value);
   formData.append('message', e.target.message.value);
@@ -37,14 +39,14 @@ const ContactPage = () => {
     <>
       {/* HERO SECTION with Contact Form */}
       <div
-        className="position-relative text-white d-flex align-items-center justify-content-center"
+        className="position-relative text-white d-flex align-items-center justify-content-center contact-hero"
         style={{
           backgroundImage: "url('/contact_us_hero.png')",
-          marginTop: -30,
-          paddingTop: '60px',
+          marginTop: -20,
+          paddingTop: '100px',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          height: '75vh',
+          height: '100vh',
           zIndex: 1,
         }}
       >
@@ -59,13 +61,14 @@ const ContactPage = () => {
             zIndex: 1,
           }}
         ></div>
-        <div className="text-center position-absolute" style={{ top: '5%', zIndex: 2 }}>
+
+        <div className="text-center position-absolute" style={{ top: '10%', zIndex: 2 }}>
           <h3 className="fw-bold">Ready to power up your next build?</h3>
         </div>
 
         <div
-          className="bg-dark rounded shadow p-4"
-          style={{ maxWidth: '500px', width: '100%', zIndex: 3 }}
+          className="bg-dark rounded shadow p-4 contact-form-wrapper"
+          style={{ maxWidth: '500px', width: '100%', zIndex: 2, marginBottom: '60px' }}
         >
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
@@ -75,6 +78,14 @@ const ContactPage = () => {
                 className="form-control"
                 placeholder="Your Name (required)"
                 required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="tel"
+                name="contact"
+                className="form-control"
+                placeholder="Your Contact Number (optional)"
               />
             </div>
             <div className="mb-3">

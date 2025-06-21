@@ -1,5 +1,4 @@
-import React from 'react';
-import './Dashboard.css'; 
+import './OurProcess.css'; 
 import { Link } from 'react-router-dom';
 
 
@@ -47,7 +46,7 @@ const OurProcess = () => {
 
         <div className="card-carousel">
           {steps.map((item, index) => (
-            <div className="flip-card" key={index}>
+            <div className="flip-card p-4 rounded-4 border border-info" key={index}>
               <div className="flip-card-inner">
                 <div className="flip-card-front">
                   <h5 className="fw-bold">{item.title}</h5>

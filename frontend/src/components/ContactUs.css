@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+  .contact-hero {
+    flex-direction: column !important;
+    padding: 1rem !important;
+    height: 800px !important;
+    text-align: center;
+  }
+
+  .contact-form-wrapper {
+    width: 100% !important;
+    margin: 2rem auto !important;
+    padding: 1.5rem !important;
+  }
+
+  .contact-hero h3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .text-end {
+    text-align: center !important;
+  }
+
+  .btn-success {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
