@@ -17,7 +17,7 @@ const Footer = () => {
             <h5 className="text-uppercase mb-3">Get in Touch</h5>
             <p className="mb-1">Talha Ahmed</p>
             <p className="mb-1">0451 215 223</p>
-            <p>talha@energyratingtudio.com.au</p>
+            <p>talha@energyratingstudio.com.au</p>
 
             <h6 className="mt-4">Follow Us</h6>
             <a href="#" className="text-white me-3 text-decoration-none">Instagram</a>

@@ -48,7 +48,6 @@ const MobileMenu = () => {
           <h2 className="mb-4">
             <Link to="/contact-us" onClick={() => setOpen(false)} className="text-white text-decoration-none">CONTACT US</Link>
           </h2>
-          <p className="text-muted mt-5">Agents apply to join our network →</p>
         </div>
       )}
     </>
