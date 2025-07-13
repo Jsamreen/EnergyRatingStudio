@@ -1,4 +1,5 @@
 import './ContactUs.css';
+import Swal from 'sweetalert2';
  
 
 const handleSubmit = async (e) => {
@@ -23,14 +24,32 @@ const handleSubmit = async (e) => {
     });
 
     if (res.ok) {
-      alert('Message submitted!');
+      Swal.fire({
+        icon: 'success',
+        title: 'Message Sent!',
+        text: 'Thank you for reaching out. We’ll get back to you shortly.',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK',
+      });
       e.target.reset();
     } else {
-      alert('Error submitting the form');
+      Swal.fire({
+        icon: 'error',
+        title: 'Submission Failed',
+        text: 'There was an error submitting your message. Please try again later.',
+        confirmButtonColor: '#d33',
+        confirmButtonText: 'OK',
+      });
     }
   } catch (error) {
     console.error('Submit error:', error);
-    alert('Submission failed');
+    Swal.fire({
+      icon: 'error',
+      title: 'Submission Failed',
+      text: 'There was an error submitting your message. Please try again later.',
+      confirmButtonColor: '#d33',
+      confirmButtonText: 'OK',
+    });
   }
 };
 
