@@ -18,7 +18,7 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    const res = await fetch('https://energyratingstudio-backend.onrender.com/api/contact/', {
+    const res = await fetch('/api/contact', {
       method: 'POST',
       body: formData,
     });
