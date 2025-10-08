@@ -1,1 +1,9 @@
 .vercel
+# Local env & node modules
+.env.local
+node_modules/
+
+# Build outputs
+.vercel
+build/
+dist/
