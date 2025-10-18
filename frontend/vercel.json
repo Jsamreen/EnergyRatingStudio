@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/(.*)",
-      "destination": "https://energyratingstudio.com.au/$1",
-      "permanent": true
-    }
-  ]
-}
